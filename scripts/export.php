@@ -30,17 +30,17 @@ if ($result->num_rows > 0) {
         $countriesArray[$m]['iso3'] = $row['iso3'];
         $countriesArray[$m]['iso2'] = $row['iso2'];
         $countriesArray[$m]['phone_code'] = $row['phonecode'];
-        $countriesArray[$m]['capital'] = $row['capital'];
-        $countriesArray[$m]['currency'] = $row['currency'];
-        $countriesArray[$m]['currency_symbol'] = $row['currency_symbol'];
-        $countriesArray[$m]['tld'] = $row['tld'];
-        $countriesArray[$m]['native'] = $row['native'];
+        // $countriesArray[$m]['capital'] = $row['capital'];
+        // $countriesArray[$m]['currency'] = $row['currency'];
+        // $countriesArray[$m]['currency_symbol'] = $row['currency_symbol'];
+        // $countriesArray[$m]['tld'] = $row['tld'];
+        // $countriesArray[$m]['native'] = $row['native'];
         $countriesArray[$m]['region'] = $row['region'];
         $countriesArray[$m]['subregion'] = $row['subregion'];
-        $countriesArray[$m]['timezones'] = json_decode($row['timezones'], true);
-        $countriesArray[$m]['translations'] = json_decode($row['translations'], true);
-        $countriesArray[$m]['latitude'] = $row['latitude'];
-        $countriesArray[$m]['longitude'] = $row['longitude'];
+        // $countriesArray[$m]['timezones'] = json_decode($row['timezones'], true);
+        // $countriesArray[$m]['translations'] = json_decode($row['translations'], true);
+        // $countriesArray[$m]['latitude'] = $row['latitude'];
+        // $countriesArray[$m]['longitude'] = $row['longitude'];
         $countriesArray[$m]['emoji'] = $row['emoji'];
         $countriesArray[$m]['emojiU'] = $row['emojiU'];
 
@@ -57,17 +57,17 @@ foreach($countriesArray as $country) {
     $countryStateCityArray[$k]['iso3'] = $country['iso3'];
     $countryStateCityArray[$k]['iso2'] = $country['iso2'];
     $countryStateCityArray[$k]['phone_code'] = $country['phone_code'];
-    $countryStateCityArray[$k]['capital'] = $country['capital'];
-    $countryStateCityArray[$k]['currency'] = $country['currency'];
-    $countryStateCityArray[$k]['currency_symbol'] = $country['currency_symbol'];
-    $countryStateCityArray[$k]['tld'] = $country['tld'];
-    $countryStateCityArray[$k]['native'] = $country['native'];
+    // $countryStateCityArray[$k]['capital'] = $country['capital'];
+    // $countryStateCityArray[$k]['currency'] = $country['currency'];
+    // $countryStateCityArray[$k]['currency_symbol'] = $country['currency_symbol'];
+    // $countryStateCityArray[$k]['tld'] = $country['tld'];
+    // $countryStateCityArray[$k]['native'] = $country['native'];
     $countryStateCityArray[$k]['region'] = $country['region'];
     $countryStateCityArray[$k]['subregion'] = $country['subregion'];
-    $countryStateCityArray[$k]['timezones'] = $country['timezones'];
-    $countryStateCityArray[$k]['translations'] = $country['translations'];
-    $countryStateCityArray[$k]['latitude'] = $country['latitude'];
-    $countryStateCityArray[$k]['longitude'] = $country['longitude'];
+    // $countryStateCityArray[$k]['timezones'] = $country['timezones'];
+    // $countryStateCityArray[$k]['translations'] = $country['translations'];
+    // $countryStateCityArray[$k]['latitude'] = $country['latitude'];
+    // $countryStateCityArray[$k]['longitude'] = $country['longitude'];
     $countryStateCityArray[$k]['emoji'] = $country['emoji'];
     $countryStateCityArray[$k]['emojiU'] = $country['emojiU'];
 
@@ -94,8 +94,8 @@ foreach($countriesArray as $country) {
             $statesArray[$i]['country_id'] = $countryId;
             $statesArray[$i]['country_code'] = $state['country_code'];
             $statesArray[$i]['state_code'] = $state['iso2'];
-            $statesArray[$i]['latitude'] = $state['latitude'];
-            $statesArray[$i]['longitude'] = $state['longitude'];
+            // $statesArray[$i]['latitude'] = $state['latitude'];
+            // $statesArray[$i]['longitude'] = $state['longitude'];
 
             // For Country State Array
             $stateArr = array(
@@ -123,15 +123,13 @@ foreach($countriesArray as $country) {
                     $citiesArray[$j]['state_code'] = $city['state_code'];
                     $citiesArray[$j]['country_id'] = (int)$countryId;
                     $citiesArray[$j]['country_code'] = $city['country_code'];
-                    $citiesArray[$j]['latitude'] = $city['latitude'];
-                    $citiesArray[$j]['longitude'] = $city['longitude'];
+                    // $citiesArray[$j]['latitude'] = $city['latitude'];
+                    // $citiesArray[$j]['longitude'] = $city['longitude'];
 
                     // For State City Array
                     array_push($cityNamesArray, array(
                         'id' => $cityId,
-                        'name' => $cityName,
-                        'latitude' => $city['latitude'],
-                        'longitude' => $city['longitude']
+                        'name' => $cityName
                     ));
 
                     $j++;
@@ -146,8 +144,8 @@ foreach($countriesArray as $country) {
             $stateCityArray[$i]['id'] = $stateId;
             $stateCityArray[$i]['name'] = $stateName;
             $stateCityArray[$i]['state_code'] = $state['iso2'];
-            $stateCityArray[$i]['latitude'] = $state['latitude'];
-            $stateCityArray[$i]['longitude'] = $state['longitude'];
+            // $stateCityArray[$i]['latitude'] = $state['latitude'];
+            // $stateCityArray[$i]['longitude'] = $state['longitude'];
             $stateCityArray[$i]['country_id'] = $countryId;
             $stateCityArray[$i]['cities'] = $cityNamesArray;
 
@@ -160,17 +158,17 @@ foreach($countriesArray as $country) {
     $countryStateArray[$k]['iso3'] = $country['iso3'];
     $countryStateArray[$k]['iso2'] = $country['iso2'];
     $countryStateArray[$k]['phone_code'] = $country['phone_code'];
-    $countryStateArray[$k]['capital'] = $country['capital'];
-    $countryStateArray[$k]['currency'] = $country['currency'];
-    $countryStateArray[$k]['currency_symbol'] = $country['currency_symbol'];
-    $countryStateArray[$k]['tld'] = $country['tld'];
-    $countryStateArray[$k]['native'] = $country['native'];
+    // $countryStateArray[$k]['capital'] = $country['capital'];
+    // $countryStateArray[$k]['currency'] = $country['currency'];
+    // $countryStateArray[$k]['currency_symbol'] = $country['currency_symbol'];
+    // $countryStateArray[$k]['tld'] = $country['tld'];
+    // $countryStateArray[$k]['native'] = $country['native'];
     $countryStateArray[$k]['region'] = $country['region'];
     $countryStateArray[$k]['subregion'] = $country['subregion'];
-    $countryStateArray[$k]['timezones'] = $country['timezones'];
-    $countryStateArray[$k]['translations'] = $country['translations'];
-    $countryStateArray[$k]['latitude'] = $country['latitude'];
-    $countryStateArray[$k]['longitude'] = $country['longitude'];
+    // $countryStateArray[$k]['timezones'] = $country['timezones'];
+    // $countryStateArray[$k]['translations'] = $country['translations'];
+    // $countryStateArray[$k]['latitude'] = $country['latitude'];
+    // $countryStateArray[$k]['longitude'] = $country['longitude'];
     $countryStateArray[$k]['emoji'] = $country['emoji'];
     $countryStateArray[$k]['emojiU'] = $country['emojiU'];
     $countryStateArray[$k]['states'] = $stateNamesArray;
@@ -185,9 +183,7 @@ foreach($countriesArray as $country) {
             // For State City Array
             array_push($citiesNamesArray, array(
                 'id' => (int)$city['id'],
-                'name' => $city['name'],
-                'latitude' => $city['latitude'],
-                'longitude' => $city['longitude']
+                'name' => $city['name']
             ));
         }
     }
